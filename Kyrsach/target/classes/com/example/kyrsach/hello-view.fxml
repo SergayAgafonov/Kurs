@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #1a1a1d;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kyrsach.HelloController">
+    <children>
+        <Button fx:id="btnAuto" layoutX="16.0" layoutY="405.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="87.0" style="-fx-background-color: #cccccc; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" text="Вернуться" textAlignment="CENTER">
+            <font>
+                <Font size="13.0" />
+            </font></Button>
+        <Button fx:id="BtnIzm" layoutX="420.0" layoutY="405.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #cccccc; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" text="Изменить" textAlignment="CENTER">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="BtnAdd" layoutX="328.0" layoutY="405.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #cccccc; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" text="Добавить" textAlignment="CENTER">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="BtnDell" layoutX="511.0" layoutY="405.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="73.0" style="-fx-background-color: #cccccc; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" text="Удалить" textAlignment="CENTER">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Button>
+        <AnchorPane layoutX="16.0" layoutY="53.0" prefHeight="344.0" prefWidth="568.0" style="-fx-background-color: #6f2232;">
+            <children>
+                <TableView fx:id="tableEvent" layoutX="18.0" layoutY="18.0" prefHeight="308.0" prefWidth="533.0">
+                    <columns>
+                        <TableColumn fx:id="CodeID" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="DateZayv" prefWidth="75.0" text="Дата заявления" />
+                  <TableColumn fx:id="CodeFIO" prefWidth="75.0" text="ФИО" />
+                  <TableColumn fx:id="CodeContDat" prefWidth="75.0" text="Контактные данные" />
+                  <TableColumn fx:id="CodeAdr" prefWidth="75.0" text="Адрес" />
+                  <TableColumn fx:id="CodeNeispr" prefWidth="86.0" text="Вид неисправности" />
+                  <TableColumn fx:id="CodeStatus" prefWidth="71.0" text="Статус" />
+                    </columns>
+                </TableView>
+            </children></AnchorPane>
+        <Label layoutX="167.0" layoutY="14.0" text="Заявления от населения" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+      <Pane fx:id="ZayvPane" layoutX="72.0" layoutY="60.0" prefHeight="332.0" prefWidth="457.0" style="-fx-background-color: #1a1a1d;">
+         <children>
+            <AnchorPane layoutX="19.0" layoutY="30.0" prefHeight="287.0" prefWidth="420.0" style="-fx-background-color: #6f2232;">
+               <children>
+                  <Button fx:id="btnCls" layoutX="333.0" layoutY="242.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="73.0" style="-fx-background-color: #cccccc; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" text="Закрыть" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="tfDaZ" layoutX="14.0" layoutY="41.0" promptText="Дата заявления" />
+                  <TextField fx:id="tfKontD" layoutX="14.0" layoutY="101.0" promptText="Контактные данные" />
+                  <TextField fx:id="tfVidN" layoutX="14.0" layoutY="156.0" promptText="Вид неисправности" />
+                  <TextField fx:id="tfAdrs" layoutX="259.0" layoutY="101.0" promptText="Адрес" />
+                  <TextField fx:id="tfFIO" layoutX="259.0" layoutY="41.0" promptText="ФИО" />
+                  <Button fx:id="btnOtpr" layoutX="14.0" layoutY="242.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="87.0" style="-fx-background-color: #cccccc; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" text="Отправить" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="tfSt" layoutX="259.0" layoutY="156.0" promptText="Статус" />
+                  <Label fx:id="wtext" layoutX="86.0" layoutY="212.0" text="Данные в полях введены некорректно" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label layoutX="152.0" layoutY="1.0" text="Подача заявления" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="IzmPane" layoutX="82.0" layoutY="70.0" prefHeight="332.0" prefWidth="457.0" style="-fx-background-color: #1a1a1d;" visible="false">
+         <children>
+            <AnchorPane layoutX="19.0" layoutY="30.0" prefHeight="287.0" prefWidth="420.0" style="-fx-background-color: #6f2232;">
+               <children>
+                  <Button fx:id="btnCls1" layoutX="333.0" layoutY="242.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="73.0" style="-fx-background-color: #cccccc; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" text="Закрыть" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="tfDaZ1" layoutX="14.0" layoutY="41.0" promptText="Дата заявления" />
+                  <TextField fx:id="tfKontD1" layoutX="14.0" layoutY="101.0" promptText="Контактные данные" />
+                  <TextField fx:id="tfVidN1" layoutX="14.0" layoutY="156.0" promptText="Вид неисправности" />
+                  <TextField fx:id="tfAdrs1" layoutX="259.0" layoutY="101.0" promptText="Адрес" />
+                  <TextField fx:id="tfFIO1" layoutX="259.0" layoutY="41.0" promptText="ФИО" />
+                  <Button fx:id="btnOtpr1" layoutX="14.0" layoutY="242.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="87.0" style="-fx-background-color: #cccccc; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" text="Изменить" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="tfSt1" layoutX="259.0" layoutY="156.0" promptText="Статус" />
+                  <Label fx:id="wtext1" layoutX="114.0" layoutY="206.0" text="Данные в полях некорректны" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label layoutX="137.0" layoutY="1.0" text="Изменение заявления" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
